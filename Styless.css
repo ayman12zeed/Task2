@@ -1,0 +1,115 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; 
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #4a90e2; 
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Footer Styles */
+.footer-distributed {
+    background-color: #4a90e2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    padding: 40px 0;
+    color: #fff;
+}
+.footer-distributed .footer-left p {
+    color: #f0f4f8;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+/* Contact List Styles */
+ul.contact-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+li.contact-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    padding: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+li.contact-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-details {
+    flex: 1;
+    margin-left: 15px;
+}
+
+.contact-name {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-email, .contact-phone {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10% auto;
+    padding: 20px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.close {
+    color: #999;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #666;
+}
+/* Add this to your existing CSS */
+#searchInput {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
