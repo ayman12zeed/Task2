@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         { name: "Ahmad zeed", email: "Ahmad.zeed@gmail.com", phone: "+972 50-6337774" }
     ];
 
+    
     let contacts = [...initialContacts];
     let editingContactIndex = null;
 
@@ -34,6 +35,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     <div class="contact-email">Email: ${contact.email}</div>
                     <div class="contact-phone">Phone: ${contact.phone}</div>
                     <button onclick="editContact(${index})">Edit</button>
+                    <button onclick="deleteContact(${index})">Delete</button>
                 </div>`;
             contactList.appendChild(li);
         });
@@ -47,6 +49,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById("phone").value = contact.phone;
         document.getElementById("popupTitle").textContent = "Edit Contact";
         document.getElementById("popup").style.display = "block";
+    }
+
+    window.deleteContact = (index) => {
+        const confirmation = confirm("Are you sure you want to delete this contact?");
+        if (confirmation) {
+            contacts.splice(index, 1);
+            renderContacts();
+        }
     }
 
     document.getElementById("openPopupButton").addEventListener("click", () => {
@@ -84,8 +94,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 
     window.deleteContacts = () => {
-        contacts = [];
-        renderContacts();
+        const confirmation = confirm("Are you sure you want to delete all contacts?");
+        if (confirmation) {
+            contacts = [];
+            renderContacts();
+        }
     }
 
     renderContacts(); 
